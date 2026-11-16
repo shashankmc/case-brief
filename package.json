@@ -1,0 +1,32 @@
+{
+  "name": "@legalblocks/bl-case-brief",
+  "version": "0.1.0",
+  "description": "Pedagogical framing + expected document pack manifest",
+  "private": false,
+  "type": "module",
+  "license": "MIT",
+  "legalblocks": {
+    "package_id": "bluelab.case-brief",
+    "manifest": "package.manifest.json",
+    "execution_type": "frontend",
+    "provides_screen": "bluelab.case"
+  },
+  "main": "CaseBrief.vue",
+  "files": [
+    "package.manifest.json",
+    "src",
+    "pages",
+    "*.ts",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "echo \"no tests\" && exit 0"
+  },
+  "dependencies": {
+    "@legalblocks/module-runtime": "^0.1.0"
+  },
+  "devDependencies": {
+    "@lawnotation/module-sdk": "^1.0.0",
+    "typescript": "^5.4.0"
+  }
+}
