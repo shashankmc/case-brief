@@ -1,7 +1,7 @@
 <template>
   <div class="lb-page page-case">
     <div class="page-header">
-      <div class="eyebrow">bluelab · step 1</div>
+      <div class="eyebrow">compliance · step 1</div>
       <h1 class="serif page-title">Case File</h1>
       <p class="page-sub mono">Read the brief, then load the document pack and advance to triage.</p>
     </div>
@@ -20,14 +20,14 @@ import { ref } from 'vue'
 import CaseBrief from '../components/CaseBrief.vue'
 import { useArtifact } from '@legalblocks/module-runtime'
 
-// Documents themselves are handled by the reused `document-upload` module
-// (its own screen, route /list, emitting lawnotation.document_set). This screen
+// Documents themselves are handled by the reused `document-management` module
+// (its own screen, route /list, emitting document-set). This screen
 // only frames the case.
 const scenarioId = ref('maritime-msp-deme')
 
 // @output hands the case_brief artifact to the bus; the adapter (localStorage or
 // an HTTP endpoint) is resolved from config so downstream screens can read it.
-const caseBrief = useArtifact('bl-case-brief')
+const caseBrief = useArtifact('case-brief')
 const handleOutput = (artifact) => {
   caseBrief.write(artifact).catch(() => {})
 }

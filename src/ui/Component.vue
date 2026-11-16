@@ -1,7 +1,7 @@
 <template>
   <div class="bcb-shell">
     <div class="bcb-header">
-      <span class="bcb-eyebrow">bluelab · step 1 · case file</span>
+      <span class="bcb-eyebrow">compliance · step 1 · case file</span>
       <h3 class="bcb-title">{{ scenario.title }}</h3>
       <span class="bcb-stats">role: {{ scenario.role }} · {{ packManifest.length }} expected docs</span>
     </div>
@@ -40,7 +40,7 @@ import { computed, watch, onMounted } from 'vue'
 
 // scenario_id is injected by the canvas runtime (config parameter); default keeps the
 // component usable standalone. Documents are NOT handled here — they come from the
-// reused `document-upload` module (lawnotation.document_set). This module only emits
+// reused `document-management` module (document-set). This module only emits
 // the pedagogical framing + the curated pack manifest (with kind/binds metadata).
 const props = defineProps({
   scenarioId: { type: String, default: 'maritime-msp-deme' },
@@ -79,12 +79,12 @@ const scenario = computed(() => SCENARIOS[props.scenarioId] ?? SCENARIOS.custom)
 const packManifest = computed(() => scenario.value.pack ?? [])
 
 // Emit the case_brief artifact for downstream screens (the register/eval stages read
-// the expected pack + binds to score agent attribution). Schema: bluelab.case_brief
+// the expected pack + binds to score agent attribution). Schema: case-brief
 // in @lawnotation/artifact-schemas once registered in Part A5.
 function emitBrief() {
   emit('output', {
     port_id: 'case_brief',
-    artifact_type: 'bluelab.case_brief',
+    artifact_type: 'case-brief',
     schema_version: '0.1.0',
     payload: {
       scenario_id: props.scenarioId,
@@ -95,7 +95,7 @@ function emitBrief() {
       pack_manifest: packManifest.value,
     },
     lineage: {
-      produced_by_package: 'bluelab.case-brief',
+      produced_by_package: 'case-brief',
       produced_by_module: 'caseBrief',
     },
   })

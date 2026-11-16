@@ -1,15 +1,15 @@
 {
-  "name": "@legalblocks/bl-case-brief",
+  "name": "@legalblocks/case-brief",
   "version": "0.1.0",
   "description": "Pedagogical framing + expected document pack manifest",
   "private": false,
   "type": "module",
   "license": "MIT",
   "legalblocks": {
-    "package_id": "bluelab.case-brief",
+    "package_id": "case-brief",
     "manifest": "package.manifest.json",
     "execution_type": "frontend",
-    "provides_screen": "bluelab.case"
+    "provides_screen": "case"
   },
   "main": "CaseBrief.vue",
   "files": [

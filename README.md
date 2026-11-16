@@ -2,12 +2,12 @@
 
 > Pedagogical framing + expected document pack manifest
 
-**LegalBlocks module package** `bluelab.case-brief` v0.1.0
+**LegalBlocks module package** `case-brief` v0.1.0
 
-- **Execution**: frontend (provides screen `bluelab.case`)
+- **Execution**: frontend (provides screen `case`)
 - **Entrypoint**: `CaseBrief.vue`
 - **Inputs**: none
-- **Outputs**: `bluelab.case_brief`
+- **Outputs**: `case-brief`
 - **Artifact I/O**: via [`@legalblocks/module-runtime`](../module-runtime) (configurable adapter: localStorage by default, HTTP endpoint when configured)
 
 ## Configuration

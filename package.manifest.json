@@ -1,11 +1,11 @@
 {
-  "package_id": "bluelab.case-brief",
+  "package_id": "case-brief",
   "package_version": "0.1.0",
   "package_type": "legalblocks.module_package",
   "artifact_types": [
     {
-      "id": "bluelab.case_brief",
-      "label": "case_brief",
+      "id": "case-brief",
+      "label": "case-brief",
       "color": "#2E6E8E",
       "short": "brief"
     }
@@ -18,14 +18,14 @@
       "glyph": "⚓",
       "family": "source",
       "display": {
-        "sub": "case_brief · scenario framing",
+        "sub": "case-brief · scenario framing",
         "note": "Pedagogical framing + expected document pack manifest"
       },
       "inputs": [],
       "outputs": [
         {
           "port_id": "case_brief",
-          "artifact_type": "bluelab.case_brief"
+          "artifact_type": "case-brief"
         }
       ],
       "configuration": {
@@ -44,7 +44,7 @@
             "name": "case_brief_endpoint",
             "type": "artifact_endpoint",
             "label": "Case brief store",
-            "artifact_key": "bl-case-brief",
+            "artifact_key": "case-brief",
             "match": "exact",
             "default": {
               "adapter": "local"
@@ -59,15 +59,15 @@
       "permissions": [],
       "requires_auth": true,
       "provides_screen": {
-        "screen_type_id": "bluelab.case",
+        "screen_type_id": "case",
         "label": "Case File",
         "glyph": "⚓",
-        "desc": "Receive the case brief; documents are loaded via Document Upload (Step 1).",
+        "desc": "Receive the case brief; documents are loaded via the Documents screen.",
         "needs": [
-          "bluelab.case_brief"
+          "case-brief"
         ],
         "optional": [
-          "lawnotation.document_set"
+          "document-set"
         ],
         "page_template": "pages/case.vue"
       }
